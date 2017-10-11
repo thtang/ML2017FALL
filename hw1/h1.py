@@ -210,7 +210,9 @@ normalized_test = np.array((test_df-feature_df.mean())/feature_df.std())
 
 test_pred = lr_ada_shf.predict(normalized_test[:,feature_index])
 submit_df = pd.DataFrame({"id":["id_"+str(i) for i in range(240)],"value":test_pred})
+
+print("save csv")
 submit_df.to_csv(output_path,index=False)
 
 # save model
-np.save('model.npy',lr_ada_shf.w_)
+#np.save('model.npy',lr_ada_shf.w_)
