@@ -184,7 +184,7 @@ def cross_validation(model_in, X, y, feature_index=feature_index,
 # fit model 
 lr_ada_shf = LinearRegressionGD_ADA(eta=1.25*1, n_iter = 1000,shuffle = True)
 
-print("Fitting model")
+print("Fitting model....")
 cross_loss = cross_validation(lr_ada_shf, normalized_feature, ground_truth, times = 1)
 print("LR_ada_shf validation Loss: ",cross_loss)
 
