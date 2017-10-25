@@ -9,42 +9,7 @@ X_train_path = sys.argv[3]
 Y_train_path = sys.argv[4]
 X_test_path = sys.argv[5]
 output_path = sys.argv[6]
-print("load data")
-text = open(X_train_path, 'r') 
-row = csv.reader(text , delimiter=",")
 
-X_train = []
-for r in row:
-    X_train.append(r)
-    
-
-text = open(Y_train_path, 'r') 
-row = csv.reader(text , delimiter=",")
-Y_train = []
-for r in row:
-    Y_train.append(r)
-
-
-text = open(X_test_path, 'r') 
-row = csv.reader(text , delimiter=",")
-
-X_test = []
-for r in row:
-    X_test.append(r)
-        
-    
-    
-train_X = (np.array(X_train)[1:,]).astype("float")
-columns = np.array(X_train)[1,:]
-
-train_y = np.array(Y_train[1:]).flatten().astype("float")
-test_X = (np.array(X_test)[1:,]).astype("float")
-
-X_mean = train_X[:,[0,1,3,4,5]].mean(axis=0)
-X_std = train_X[:,[0,1,3,4,5]].std(axis=0)
-
-train_X[:,[0,1,3,4,5]] = (train_X[:,[0,1,3,4,5]]- X_mean) / X_std
-test_X[:,[0,1,3,4,5]] = (test_X[:,[0,1,3,4,5]]- X_mean) / X_std
 
 
 def sign(a):
@@ -108,6 +73,46 @@ class LogisticRegression_ADA(object):
     def _shuffle(self,X,y):
         r = np.random.permutation(len(y))
         return X[r], y[r]
+
+print("load data")
+text = open(X_train_path, 'r') 
+row = csv.reader(text , delimiter=",")
+
+X_train = []
+for r in row:
+    X_train.append(r)
+    
+
+text = open(Y_train_path, 'r') 
+row = csv.reader(text , delimiter=",")
+Y_train = []
+for r in row:
+    Y_train.append(r)
+
+
+text = open(X_test_path, 'r') 
+row = csv.reader(text , delimiter=",")
+
+X_test = []
+for r in row:
+    X_test.append(r)
+        
+    
+    
+train_X = (np.array(X_train)[1:,]).astype("float")
+columns = np.array(X_train)[1,:]
+
+train_y = np.array(Y_train[1:]).flatten().astype("float")
+test_X = (np.array(X_test)[1:,]).astype("float")
+
+X_mean = train_X[:,[0,1,3,4,5]].mean(axis=0)
+X_std = train_X[:,[0,1,3,4,5]].std(axis=0)
+
+train_X[:,[0,1,3,4,5]] = (train_X[:,[0,1,3,4,5]]- X_mean) / X_std
+test_X[:,[0,1,3,4,5]] = (test_X[:,[0,1,3,4,5]]- X_mean) / X_std
+
+
+
 print("fitting....")
 logit = LogisticRegression_ADA()
 logit.fit(train_X,train_y)
