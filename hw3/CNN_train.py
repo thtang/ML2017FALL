@@ -15,8 +15,6 @@ from keras.layers import Bidirectional
 from keras.layers.normalization import BatchNormalization
 from keras.callbacks import History ,ModelCheckpoint
 from keras.layers import Activation, LeakyReLU
-from sklearn.preprocessing import LabelBinarizer
-from sklearn.model_selection import train_test_split
 import collections
 import sys
 import pickle
@@ -35,10 +33,25 @@ def normalize_2(x):
 train = pd.read_csv(train_path)
 X = np.array([row.split(" ") for row in train["feature"].tolist()],dtype=np.float32)
 y = train["label"].tolist()
-encoder = LabelBinarizer()
-y = encoder.fit_transform(y)
-    
-train_X, valid_X, train_y, valid_y = train_test_split(X, y, test_size=0.1, random_state=26)
+
+with open('encoder.pkl', 'rb') as f:
+    encoder = pickle.load(f)
+
+y = encoder.transform(y)
+
+def shuffle_split_data(X, y, percent):
+    arr_rand = np.random.rand(X.shape[0])
+    split = arr_rand < np.percentile(arr_rand, percent)
+    X_train = X[split]
+    y_train = y[split]
+    X_test =  X[~split]
+    y_test = y[~split]
+
+    print len(X_Train), len(y_Train), len(X_Test), len(y_Test)
+    return X_train, y_train, X_test, y_test
+
+train_X, valid_X, train_y, valid_y = shuffle_split_data(X, y, percent=0.9)
+
 filter_vis_input = train_X[10].reshape(48,48,1)
 output_index = train_y[10]
 train_X = normalize_2(train_X.reshape(-1,48,48,1))
@@ -99,17 +112,6 @@ print(model.summary())
 hist = History()
 early_stop = EarlyStopping(monitor='val_acc', patience=7, verbose=1)
 check_save  = ModelCheckpoint("model/model1-{epoch:05d}-{val_acc:.5f}.h5",monitor='val_acc',save_best_only=True)
-# model.fit(train_X, train_y, epochs=90, batch_size=128,validation_split=0.1, call_backs = [early_stop])
-
-# self-training 
-# model.fit_generator(
-#             datagen.flow(np.concatenate((train_X,self_X)), 
-#                          np.concatenate((train_y,encoder.transform(self_y))), batch_size=batch_size), 
-#             steps_per_epoch=5*len(np.concatenate((train_X,self_X)))//batch_size,
-#             validation_data=(valid_X, valid_y),
-#             epochs=epochs, callbacks=[check_save,hist], workers = 10 )
-
-
 
 model.fit_generator(
             datagen.flow(train_X, train_y, batch_size=batch_size), 
