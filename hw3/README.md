@@ -1,6 +1,6 @@
 
 ### Package : 
-`Keras` &nbsp; ` Numpy`  &nbsp;` pandas` &nbsp;
+`Keras` &nbsp; ` Numpy`  &nbsp;` pandas` &nbsp;` Scikit-learn` &nbsp;
 
 
 ### Note :
@@ -11,4 +11,10 @@ import os
 os.environ['CUDA_VISIBLE_DEVICES'] = "0"
 ```
 To reduce download time consumption, I upload **a singel model** with acc about 0.70688 and 0.70743 on private and public board <br>
-The best performance in kaggle were achieved by ensembling 7 models.
+The best performance in kaggle were achieved by ensembling 7 models.<br>
+
+Usage<br>
+
+```
+bash hw3_test.sh <test data> <output file>
+```
