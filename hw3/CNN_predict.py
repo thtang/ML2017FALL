@@ -15,8 +15,6 @@ from keras.layers import Bidirectional
 from keras.layers.normalization import BatchNormalization
 from keras.callbacks import History ,ModelCheckpoint
 from keras.layers import Activation, LeakyReLU
-from sklearn.preprocessing import LabelBinarizer
-from sklearn.model_selection import train_test_split
 import collections
 import sys
 import pickle
