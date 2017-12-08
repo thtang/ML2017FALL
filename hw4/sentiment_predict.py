@@ -18,11 +18,7 @@ ensemble = False
 
 test_data_path = sys.argv[1]
 prediction_path = sys.argv[2]
-# with open("training_label.txt") as f:
-#     train = f.readlines()
 
-# with open("training_nolabel.txt") as f:
-#     train_nolab = f.readlines()
 with open(test_data_path) as f:
     test = f.readlines()
 
@@ -92,7 +88,7 @@ if ensemble == True:
 	# store some test_X_num for self training
 	pred_y_prob = (p1+p2+p3+p4+p5+p6+p7+p8+p9+p10)/10
 else:
-	model = load_model("q4_with_modelW2V-00004-0.82395.h5")
+	model = load_model("modelW2V-00005-0.83330.h5")
 	print(model.summary())
 	pred_y_prob = model.predict(test_X_num)
 pred_y = np.argmax(pred_y_prob,axis=1)
