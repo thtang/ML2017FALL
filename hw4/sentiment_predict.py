@@ -13,7 +13,7 @@ import sys
 import os
 import re
 import pickle
-# os.environ['CUDA_VISIBLE_DEVICES'] = sys.argv[1]
+# os.environ['CUDA_VISIBLE_DEVICES'] = "7"
 ensemble = False
 
 test_data_path = sys.argv[1]
