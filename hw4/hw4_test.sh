@@ -1,0 +1,1 @@
+python3 sentiment_predict.py $1 $2
