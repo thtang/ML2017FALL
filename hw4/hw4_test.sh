@@ -1,1 +1,1 @@
-python3 sentiment_predict.py $1 $2
+python sentiment_predict.py $1 $2

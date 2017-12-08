@@ -1,0 +1,1 @@
+python hw4_w2v_2.py $1 $2
