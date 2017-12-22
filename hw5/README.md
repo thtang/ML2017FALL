@@ -1,6 +1,6 @@
 
 ### Package : 
-`Keras` &nbsp; ` Numpy`  &nbsp;` pandas` &nbsp; sklearn` &nbsp;
+`Keras` &nbsp; ` Numpy`  &nbsp;` pandas` &nbsp; `sklearn` &nbsp;
 
 
 ### Note :
