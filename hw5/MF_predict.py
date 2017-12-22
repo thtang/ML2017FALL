@@ -1,4 +1,3 @@
-import numpy as np
 import keras.backend as K
 from keras.regularizers import l2
 import keras
