@@ -13,7 +13,7 @@ for i in range(415):
     single_img = skimage.io.imread(os.path.join(picture_path,str(i)+".jpg"))
     image_X.append(single_img)
 image_flat = np.reshape(image_X,(415,-1))
-mean_face = np.mean(image_flat,axis=0).astype(np.uint8)
+mean_face = np.mean(image_flat,axis=0)
 
 image_center = image_flat - mean_face
 
@@ -30,4 +30,9 @@ weights = np.dot(image_center, U)
 top = 4
 
 recon = mean_face + np.dot(weights[test_imgi_index, :top], U[:, :top].T)
-skimage.io.imsave("reconstruction.jpg", recon.reshape(600,600,3).astype(np.uint8))
+recon -= np.min(recon)
+recon /= np.max(recon)
+recon = (recon * 255).astype(np.uint8)
+
+
+skimage.io.imsave("reconstruction.jpg", recon.reshape(600,600,3))
