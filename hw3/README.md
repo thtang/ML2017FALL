@@ -18,3 +18,5 @@ Usage<br>
 ```
 bash hw3_test.sh <test data> <output file>
 ```
+### Best model architecture :
+![alt text](https://github.com/thtang/ML2017FALL/blob/master/hw3/best_cnn.png)
