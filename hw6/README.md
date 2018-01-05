@@ -4,4 +4,4 @@
 
 ### Principal Components Analysis (PCA) of colored faces
 
-![Alt Text](https://github.com/thtang/ML2017/blob/master/hw6/reconstruction.gif)
+![Alt Text](https://github.com/thtang/ML2017FALL/blob/master/hw6/reconstruction.gif)
