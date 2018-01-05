@@ -13,3 +13,7 @@ Usage<br>
 ```
 bash hw4_test.sh <testing data> <prediction file>
 ```
+
+### Best model architecture :
+
+![alt text](https://github.com/thtang/ML2017FALL/blob/master/hw4/best_model.png)
