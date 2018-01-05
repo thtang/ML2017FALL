@@ -18,3 +18,5 @@ Usage<br>
 bash hw5.sh <test.csv path> <prediction file path> <movies.csv path> <users.csv path>
 bash hw5_best.sh <test.csv path> <prediction file path> <movies.csv path> <users.csv path>
 ```
+
+![alt text](https://github.com/thtang/ML2017FALL/blob/master/hw5/best_model.png)
