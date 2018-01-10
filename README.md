@@ -10,7 +10,7 @@
 [kaggle competition](https://www.kaggle.com/c/ml-2017fall-hw3).
 
 **Text sentiment classification** using recurrent neural network, specifically, Long short-term memory network (LSTM)
-[kaggle competition](https://www.kaggle.com/c/ml2017-fall-hw4).
+[kaggle competition](https://www.kaggle.com/c/ml-2017fall-hw4).
 
 **Predict movie ratings** using Matrix factorization
 [kaggle competition](https://www.kaggle.com/c/ml2017-fall-hw5).
