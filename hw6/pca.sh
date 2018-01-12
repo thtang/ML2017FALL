@@ -1,1 +1,1 @@
-python3 pca_generate.py $1 $2
+python3.5 pca_generate.py $1 $2
