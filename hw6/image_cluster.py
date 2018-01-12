@@ -14,10 +14,12 @@ test_case = pd.read_csv(test_path)
 image = np.load(image_path)
 
 # normalize image
+print("Run PCA")
 image_X = image / 255
 pca = PCA(n_components=400, whiten=True,svd_solver="full",random_state=0)
 image_X_PCA = pca.fit_transform(image_X)
 
+print("Run KMeans")
 cluster = KMeans(n_clusters=2)
 cluster.fit(image_X_PCA)
 
