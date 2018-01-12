@@ -1,4 +1,4 @@
-#Income Prediction
+# Income Prediction
 
 ### Package : 
 `Numpy` &nbsp; `Scikit-learn` &nbsp;` XGBoost`  &nbsp;` pandas` &nbsp;
