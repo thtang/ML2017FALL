@@ -9,7 +9,7 @@
 **Image sentiment classification** using convolutional neural network (CNN).
 [kaggle competition](https://www.kaggle.com/c/ml-2017fall-hw3). **Top2%**
 
-**Text sentiment classification** using recurrent neural network, specifically, Long short-term memory network (LSTM)
+**Text sentiment classification** using recurrent neural network (LSTM)
 [kaggle competition](https://www.kaggle.com/c/ml-2017fall-hw4). **Top1%**
 
 **Predict movie ratings** using Matrix factorization
