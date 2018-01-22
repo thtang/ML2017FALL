@@ -14,7 +14,11 @@ import os
 os.environ['CUDA_VISIBLE_DEVICES'] = "0"
 ```
 Usage<br>
-
+** Training **
+```
+python3 inference.py [train_data_path] [test_data_path] [train_caption_path] [test_caption_path] [output_path] [GPU number]
+```
+** Testing **
 ```
 python3 inference.py [train_data_path] [test_data_path] [train_caption_path] [test_caption_path] [output_path]
 ```
