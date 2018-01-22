@@ -8,10 +8,12 @@
 ### Usage :
 **Training:**
 ```
+cd src
 python3 inference.py [train_data_path] [test_data_path] [train_caption_path] [test_caption_path] [output_path] [GPU number]
 ```
 **Testing:**
 ```
+cd src
 python3 inference.py [train_data_path] [test_data_path] [train_caption_path] [test_caption_path] [output_path]
 ```
 
