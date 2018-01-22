@@ -14,15 +14,17 @@ import os
 os.environ['CUDA_VISIBLE_DEVICES'] = "0"
 ```
 Usage<br>
-** Training **
+**Training**
 ```
 python3 inference.py [train_data_path] [test_data_path] [train_caption_path] [test_caption_path] [output_path] [GPU number]
 ```
-** Testing **
+**Testing**
 ```
 python3 inference.py [train_data_path] [test_data_path] [train_caption_path] [test_caption_path] [output_path]
 ```
 
-### Best model architecture :
-
-![alt text](https://github.com/thtang/ML2017FALL/blob/master/hw5/best_model.png)
+### model architecture :
+**RNN retrieval model**
+![alt text](https://github.com/thtang/ML2017FALL/blob/master/final/output/RNN_archi.png)
+**RNN+CNN retrieval model**
+![alt text](https://github.com/thtang/ML2017FALL/blob/master/final/output/CNN_RNN_archi.png)
