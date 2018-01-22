@@ -1,5 +1,5 @@
 # Listen and Translate
-Team: NTU_r06946003_鬼氏企業 / r06946003 湯忠憲 r06922030 傅敏桓 r03902085 吳家謙 d05921027 張鈞閔
+Team: NTU_r06946003_鬼氏企業 / d05921027 張鈞閔 r03902085 吳家謙 r06922030 傅敏桓 r06946003 湯忠憲
 
 ### Package : 
 `keras==2.0.8` &nbsp; ` numpy==1.13.3`  &nbsp;` pandas==0.20.3` &nbsp; `sklearn==0.19.1` &nbsp;
@@ -10,12 +10,12 @@ Team: NTU_r06946003_鬼氏企業 / r06946003 湯忠憲 r06922030 傅敏桓 r0390
 **Training:**
 ```
 cd src
-python3 inference.py [train_data_path] [test_data_path] [train_caption_path] [test_caption_path] [output_path] [GPU number]
+python3 inference.py [train_data_path] [test_data_path] [train_caption_path] [test_csv_path] [output_path] [GPU number]
 ```
 **Testing:**
 ```
 cd src
-python3 inference.py [train_data_path] [test_data_path] [train_caption_path] [test_caption_path] [output_path]
+python3 inference.py [train_data_path] [test_data_path] [train_caption_path] [test_csv_path] [output_path]
 ```
 
 ### Note :
