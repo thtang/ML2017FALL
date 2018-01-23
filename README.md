@@ -17,3 +17,5 @@
 
 **Image clustering (unsupervised learning)**
 [kaggle competition](https://www.kaggle.com/c/ml2017fall-hw6). **Top2%**
+
+**[Final] Listen and Translate** [Kaggle competition](https://www.kaggle.com/c/ml2017fallfinaltaiwanese/).**Top6%**
