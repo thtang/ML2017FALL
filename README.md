@@ -18,4 +18,4 @@
 **[Image clustering](https://github.com/thtang/ML2017FALL/tree/master/hw6) (unsupervised learning)**
 [kaggle competition](https://www.kaggle.com/c/ml2017fall-hw6). **Top2%**
 
-**[Final] Listen and Translate** [Kaggle competition](https://www.kaggle.com/c/ml2017fallfinaltaiwanese/).**Top6%**
+**[Final] [Listen and Translate](https://github.com/thtang/ML2017FALL/tree/master/final)** [Kaggle competition](https://www.kaggle.com/c/ml2017fallfinaltaiwanese/).**Top6%**
