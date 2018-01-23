@@ -1,6 +1,6 @@
 # ML2017FALL
 
-**Predict PM2.5** using linear regression. 
+**Predict PM2.5(https://github.com/thtang/ML2017FALL/tree/master/hw1)** using linear regression. 
 [kaggle competition](https://www.kaggle.com/c/ml-2017fall-hw1). **Top28%**
 
 **Predict income** using logistic regression and gradient boosting tree.
