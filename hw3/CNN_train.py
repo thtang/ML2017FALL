@@ -13,6 +13,7 @@ from keras.layers import Flatten
 from keras.models import load_model
 from keras.layers import Bidirectional
 from keras.layers.normalization import BatchNormalization
+from keras.preprocessing.image import ImageDataGenerator
 from keras.callbacks import History ,ModelCheckpoint
 from keras.layers import Activation, LeakyReLU
 import collections
