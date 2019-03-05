@@ -20,4 +20,4 @@ Course website: http://speech.ee.ntu.edu.tw/~tlkagk/courses_ML17_2.html
 6. **Image clustering (unsupervised learning)**
 [[link]](https://github.com/thtang/ML2017FALL/tree/master/hw6) [[kaggle]](https://www.kaggle.com/c/ml2017fall-hw6). **Top2%**
 
-**[Final] Listen and Translate [[link]](https://github.com/thtang/ML2017FALL/tree/master/final)(ASR+translation)** [[Kaggle]](https://www.kaggle.com/c/ml2017fallfinaltaiwanese/).**Top6%**
+**[Final] Listen and Translate (ASR+translation) [[link]](https://github.com/thtang/ML2017FALL/tree/master/final)** [[Kaggle]](https://www.kaggle.com/c/ml2017fallfinaltaiwanese/).**Top6%**
